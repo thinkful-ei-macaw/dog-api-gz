@@ -16,3 +16,13 @@ $(function() {
   console.log('App loaded! Waiting for submit!');
   watchForm();
 });
+
+
+const generateDogImageTemplate = (dogLink) => {
+  let html = '';
+  const pics = dogLink.message;
+  pics.forEach(pic => {
+    html += `<img src="${pic}">`;
+  });
+  return html;
+};

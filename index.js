@@ -1,4 +1,4 @@
-function getDogImage() {
+function getDogImage(n) {
   fetch('https://dog.ceo/api/breeds/image/random')
     .then(response => response.json())
     .then(responseJson => console.log(responseJson));

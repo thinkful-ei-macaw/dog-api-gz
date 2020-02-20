@@ -1,5 +1,5 @@
 function getDogImage(n) {
-  fetch('https://dog.ceo/api/breeds/image/random')
+  fetch(`https://dog.ceo/api/breeds/image/random/${n}`)
     .then(response => response.json())
     .then(responseJson => console.log(responseJson));
 }
@@ -7,7 +7,8 @@ function getDogImage(n) {
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
-    getDogImage();
+    let n = $('#number-of-dogs').val();
+    getDogImage(n);
   });
 }
 
